@@ -1,0 +1,4 @@
+Ceci est un fichier test
+ligne2
+ligne3
+dernière ligne.
