@@ -20,17 +20,17 @@ def uncover(s1, s2, x):
 			new_word+=s2[i]
 	return new_word
 
-def is_one_word(chaine):
-	for letter in chaine:
-		if letter == " " or letter == "\n" or letter == "\r":
-			return None
-	return chaine
-
 def is_one_letter(chaine):
-	if len(chaine) == 1 and chaine.isalpha():
+	if type(chaine) == str and len(chaine) == 1 and chaine.isalpha():
 		return chaine
 	else: 
 		return None
+
+
+
+
+
+
 
 
 
@@ -75,5 +75,5 @@ def pendu():
 	else:
 		print("Vous avez perdu")
 
-pendu()
-
+if __name__ == "__main__": 
+	pendu()

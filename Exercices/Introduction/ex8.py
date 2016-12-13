@@ -4,7 +4,7 @@ def read1(nom):
 
 def read2(nom):
 	fichier = open(nom)
-	ligne = fichier.readline
+	ligne = fichier.readline()
 	while ligne != "":
 		print(ligne.strip())
 		ligne = fichier.readline()
