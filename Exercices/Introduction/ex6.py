@@ -23,7 +23,14 @@ def duree2(debut,fin):
 def insertion_triee(lst, nbr):
 	indice = 0
 	for i in lst:
+		if i <= nbr:              # Sinon, on a trouve l'indice auquel inserer
+			indice += 1
+	lst[:] = lst[:indice] + [nbr] + lst[indice:]  # On modifie la liste
+	
+def insertion_triee_avec_break(lst, nbr):
+	indice = 0
+	for i in lst:
 		if i > nbr:              # On a trouve l'indice auquel inserer
-			break
+			break                # Arrete la boucle
 		indice += 1
 	lst[:] = lst[:indice] + [nbr] + lst[indice:]  # On modifie la liste
