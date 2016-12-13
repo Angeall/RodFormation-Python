@@ -4,7 +4,7 @@ def afficher_caractere(s, i):
 def caractere(s, i):
 	return s[i]
 	
-def caractere(s, i, j):
+def caracteres(s, i, j):
 	return s[i:j+1]
 
 def est_pair(nbr):
@@ -13,6 +13,6 @@ def est_pair(nbr):
 	return False                # Si on arrive ici, c'est qu'on a pas 
 	                            #   retourne True a la ligne d'avant.
 def une_lettre(s):
-	if type(s) == str and len(s) == 1:
+	if type(s) == str and len(s) == 1 and s.isaplha():
 		return True
 	return False

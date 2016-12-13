@@ -26,4 +26,4 @@ def insertion_triee(lst, nbr):
 		if i > nbr:              # On a trouve l'indice auquel inserer
 			break
 		indice += 1
-	seq[:] = seq[:indice] + [nbr] + seq[indice:]  # On modifie la liste
+	lst[:] = lst[:indice] + [nbr] + lst[indice:]  # On modifie la liste
