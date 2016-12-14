@@ -44,7 +44,7 @@ class Personne():
 
 
 
-		
+
 	def __add__(self, other):
 		if type(other) == type(self):
 			self.marier(other.id)

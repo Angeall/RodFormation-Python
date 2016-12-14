@@ -66,7 +66,7 @@ class Personne(metaclass=ABCMeta):
 		
 		
 	def __add__(self, other):
-		if type(other) == type(self):
+		if isinstance(other, Personne):
 			self.marier(other.id)
 			other.marier(self.id)
 	
@@ -131,4 +131,5 @@ class Homme(Personne):
 class Femme(Personne):
 	@property
 	def sexe(self):
-		return "Femme"				
+		return "Femme"	
+

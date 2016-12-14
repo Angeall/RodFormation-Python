@@ -74,7 +74,7 @@ class Personne(metaclass=ABCMeta):
 		return self.nom + " " + self.prenom + ", " + str(self.age) + " ans."
 		
 	def __add__(self, other):
-		if type(other) == type(self):
+		if isinstance(other, Personne):
 			self.marier(other.id)
 			other.marier(self.id)
 		else:
