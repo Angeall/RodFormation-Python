@@ -1,12 +1,12 @@
 def belongs_to_dictionary():
-	word = str(input("Entrez un mot : "))
+	word = input("Entrez un mot : ")
 	while not word_in_file(word):
 		word = input("Entrez un mot : ")
 	return word
 
 def word_in_file(word):
 	f = open("dico.txt", 'r')
-	for line in f.readlines():
+	for line in f:
 		if line.strip() == word:
 			return True
 	return False
@@ -22,9 +22,9 @@ def uncover(s1, s2, x):
 
 def is_one_letter(chaine):
 	if type(chaine) == str and len(chaine) == 1 and chaine.isalpha():
-		return chaine
+		return True
 	else: 
-		return None
+		return False
 
 
 
@@ -58,11 +58,11 @@ def pendu():
 
 	inputLetter = ""
 
-	while trialsLeft != 0 and hiddenWord != chosenWord:
+	while not(trialsLeft == 0 or hiddenWord == chosenWord):
 		print("Mot : " + hiddenWord + "\nEssais restants : " + \
 			str(trialsLeft) + "\nLettres essayees : " + lettersTried + "\n")
 		
-		while inputLetter in lettersTried:
+		while inputLetter in lettersTried or not(is_one_letter(inputLetter)):
 			inputLetter = input("Entrez une lettre : ")
 		lettersTried += inputLetter
 		if not inputLetter in chosenWord:

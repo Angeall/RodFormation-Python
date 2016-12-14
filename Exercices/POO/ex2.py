@@ -39,6 +39,9 @@ class Personne():
 
 class Fonctionnaire(Personne):
 	
+	def __init__(self, prenom, nom, age, nationalite="Belge"):
+		super().__init__(prenom, nom, age, nationalite, "Fonctionnaire")
+	
 	def avoirStatut(self):
 		if self.metier is None:
 			return super().avoirStatut()
@@ -48,4 +51,7 @@ class Fonctionnaire(Personne):
 
 class EmployeCommunal(Fonctionnaire):
 	def __init__(self, prenom, nom, age, nationalite="Belge"):
-		super().__init__(prenom, nom, age, "Employe communal", nationalite)
+		Personne.__init__(self, prenom, nom, age, nationalite, "Employe communal")
+	
+a = EmployeCommunal("Anthony", "Rouneau", 22)
+print(a.metier)

@@ -96,4 +96,3 @@ class Personne():
 	def __eq__(self, other):
 		if type(other) == type(self):
 			return self.nom == other.nom and self.prenom == other.prenom
-				

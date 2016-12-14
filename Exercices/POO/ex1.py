@@ -11,8 +11,8 @@ class Personne():
 		self.id = id
 		id += 1
 		
-	def vieillir(self, age=1):
-		self.age += age
+	def vieillir(self, annees=1):
+		self.age += annees
 	
 	def expatrier(self, nationalite):
 		self.nationalite = nationalite

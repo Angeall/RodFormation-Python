@@ -24,7 +24,7 @@ if __name__=="__main__":
 	monObjet = MaClasse("x", 55)
 	print(monObjet.attribut1)              # Affiche : x
 	print(monObjet.y)                      # Affiche : 55
-	print(monObjet.maMethode("x2"))        # Affiche : 54
+	print(monObjet.maMethode("x2"))        # Affiche : -1
 	print(monObjet.attribut1)              # Affiche : x2
 	print(monObjet.y)                      # Affiche : 0
 	print(monObjet.MA_CONSTANTE)           # Affiche : 42
