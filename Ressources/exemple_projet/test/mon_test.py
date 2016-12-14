@@ -1,6 +1,5 @@
 
-
-def my_function(title: str, x: int, y: int) -> str:
+def my_function(title: str, x: int, y: int= 4) -> str:
     """
     :param title: Le titre de la chaine de caractère résultat
     :param x: Premier élément de la chaine de caractère résultat
@@ -11,3 +10,10 @@ def my_function(title: str, x: int, y: int) -> str:
     Construis une chaine de caractères utilisant le titre donné ainsi que x et y
     """
     return title + "\n" + str(x) + " " + str(y)
+
+
+class MaClasse:
+    """
+    Description de MaClasse
+    """
+    pass

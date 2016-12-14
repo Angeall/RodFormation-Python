@@ -5,6 +5,7 @@ from abc import ABCMeta, abstractmethod
 
 id = 0
 
+
 class ChaineDeCaractereAttendueErreur(Exception):
 	pass
 
@@ -16,7 +17,6 @@ def sauver_changement_nationalite(fct):
 		msg = old  + " -> " + new + " : " + str(datetime.date.today())
 		self.nationalites.append(msg)
 	return sauver_expatriement
-
 
 
 
@@ -78,7 +78,7 @@ class Personne(metaclass=ABCMeta):
 			self.marier(other.id)
 			other.marier(self.id)
 		else:
-			raise NotImplemented(
+			raise NotImplementedError(
 				"L'addition d'une Personne n'est definie qu'avec une autre Personne")
 	
 	def __mul__(self, other):
@@ -95,7 +95,7 @@ class Personne(metaclass=ABCMeta):
 					lst.append(Femme(prenom, self.nom, 0, self.nationalite))
 			return lst			
 		else:
-			raise NotImplemented(
+			raise NotImplementedError(
 				"La multiplication d'une Personne n'est definie qu'avec un entier")
 	
 	def __rmul__(self, other):
@@ -148,4 +148,4 @@ if __name__ == "__main__":
 	try:
 		a = Homme(3, "Albert", 55)
 	except ChaineDeCaractereAttendueErreur:
-		print("Echec car le prenom n'est pas une chaine de caractere")
+		print(erreur)
