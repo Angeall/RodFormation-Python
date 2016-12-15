@@ -3,6 +3,7 @@ import tkinter.ttk as ttk
 fenetre = Tk()  # Creer la fenetre
 # Configuration de la spinbox
 var = StringVar()
+#~ choix = ["test1", "test2", "test3", "test4"]
 choix = ["test1", "test2", "test3", "test4"]
 combobox = ttk.Combobox(fenetre, values=choix, 
 					    textvariable=var,

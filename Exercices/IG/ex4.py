@@ -1,7 +1,7 @@
 from tkinter import Tk, StringVar
 import tkinter.ttk as ttk
 
-def update_label(label, var):
+def update_label(label, var: StringVar):
     """
     Met a jour le texte de label en fonction de var.
     """
@@ -19,9 +19,9 @@ update_label(labelX, color)
 i = 1
 for value in choice:
     radiobutton = ttk.Radiobutton(root, text=value, variable=color, value=value,
-                              command=lambda: update_label(labelX, color), width=30)
+                              command=lambda: update_label(labelX, color), width = 10)
 
-    radiobutton.grid(row=i, column=0)
+    radiobutton.grid(row=i, column=1)
     i += 1
 
 labelX.grid(row=0, column=0, columnspan=3)

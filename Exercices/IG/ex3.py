@@ -19,7 +19,8 @@ i = 0
 def changer_etat():
 	global i, entry
 	i += 1
-	if i%2 == 0:
+	print(entry.state())
+	if "disabled" in entry.state():
 		titre_b2.set("Desactiver champs de saisie")
 		entry.state(("!disabled",))
 	else:
