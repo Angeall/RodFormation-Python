@@ -156,3 +156,19 @@ class Personne(metaclass=ABCMeta):
     def __eq__(self, other):
         if type(other) == type(self):
             return self.nom == other.nom and self.prenom == other.prenom
+
+
+class Femme(Personne):
+    @property
+    def sexe(self):
+        return "Femme"
+
+class Homme(Personne):
+    @property
+    def sexe(self):
+        return "Homme"
+
+if __name__ == '__main__':
+    a = Homme("", "", 33)
+    a.carteIdentite = "ci.jpg"
+    a.afficherCarteIdentite()
